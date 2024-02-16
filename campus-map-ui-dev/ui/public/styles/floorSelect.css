@@ -1,0 +1,41 @@
+#floorSelect {
+    width: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    display: none;
+}
+#dec_floor,
+#inc_floor {
+    display: block;
+    width: 33px;
+    margin: 0;
+    background: #002E5D;
+    border: solid 1px #002E5D;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 23px;
+    font-size: 16px;
+}
+#dec_floor:hover,
+#inc_floor:hover {
+    background: #0057B7;
+}
+#dec_floor {
+    border-radius: 0 0 3px 3px;
+}
+#inc_floor {
+    border-radius: 3px 3px 0 0;
+}
+.quantity__input {
+    width: 33px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    background: #fff;
+    font-size: 16px;
+}
