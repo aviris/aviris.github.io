@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+  <title>Campus Map</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/css/main.css"/>
+  <link rel="stylesheet" href="https://cdn.byu.edu/byu-theme-components/2.x.x/byu-theme-components.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/feedback.css"/>
+  <link rel="stylesheet" href="styles/floorSelect.css"/>
+  <link rel="stylesheet" href="styles/relativeFloorSelect.css"/>
+  <link rel="stylesheet" href="styles/disclaimer.css"/>
+  <link rel="stylesheet" href="styles/overlay.css"/>
+  <link rel="stylesheet" href="styles/buildingSelect.css"/>
+  <link rel="stylesheet" href="styles/esriOverrides.css"/>
+
+  <!-- Scripts -->
+  <script>
+    if (location.pathname === '/') {
+      window.dojoConfig = {
+        packages: [
+          {
+            name: 'scripts',
+            location: '/scripts'
+          }
+        ]
+      }
+    } else {
+      const locationPath = location.pathname.replace(/\/[^\/]+$/, '')
+      window.dojoConfig = {
+        packages: [
+          {
+            name: 'scripts',
+            location: locationPath + '/scripts'
+          }
+        ]
+      }
+    }
+  </script>
+  <script src="https://js.arcgis.com/4.17/"></script>
+  <script async src="https://cdn.byu.edu/byu-theme-components/2.x.x/byu-theme-components.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <byu-header>
+    <span slot="site-title">Campus Map</span>
+  </byu-header>
+  <div class="page-content">
+    <div class="panel-side" id="panel-side">
+      <div class="panel-side-title visually-hidden" id="panel-side-title">
+        <h2>Select a building...</h2>
+        <span id="close-panel-side">&#215;</span>
+      </div>
+      <ul id="listNode">
+        <li></li>
+      </ul>
+    </div>
+
+    <div id="viewDiv"></div>
+
+    <div id="floorSelect">
+      <button id="dec_floor">-</button>
+      <label for="floor_num" class="visually-hidden">
+        Floor Number
+      </label>
+      <input id="floor_num" name="quantity" disabled="disabled" class="quantity__input" value="0">
+      <button id="inc_floor">+</button>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <div id="modal-title"></div>
+        <p id="modal-text"></p>
+        <button class="close-btn">Continue</button>
+      </div>
+    </div>
+
+
+
+    <div id="popupContent" style="display: none">
+      <img class="popupImage" id="popupImage" src='' alt="">
+      <div id="popupButtonContainer">
+        <button class="popupButton active" id="about-button">About</button>
+        <button class="popupButton" id="indoor-button">Indoor</button>
+      </div>
+      <div class="popupText" id="popupText">${Description}</div>
+      <a target="_blank" href=""></a>
+    </div>
+
+    <div id="feedback-form-container">
+      <div class="form-header">
+        <span>Feedback</span>
+        <span id="close-form">&#215;</span>
+      </div>
+      <div class="form-body" id="feedback-form-body">
+        <form id="feedback-form">
+          <label for="feedback-name">
+            <input type="text" id="feedback-name" placeholder="Name">
+          </label>
+          <label for="feedback-email">
+            <input type="text" id="feedback-email" placeholder="Email">
+          </label>
+          <label for="feedback-location">
+            <input type="text" id="feedback-location" placeholder="Location">
+          </label>
+          <label for="feedback-reason">
+            <select id="feedback-reason">
+              <option value="suggestion">Suggestions</option>
+              <option value="bug">Bug</option>
+              <option value="out-of-date">Out of date information.</option>
+            </select>
+          </label>
+          <label for="feedback-message">
+            <textarea id="feedback-message" rows="4" placeholder="Message"></textarea>
+          </label>
+          <button type="submit" name="submit" id="feedback-submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>require(['scripts/main'])</script>
+
+</body>
+</html>

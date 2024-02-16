@@ -1,0 +1,38 @@
+.esri-view-width-medium .esri-popup__main-container,
+.esri-view-width-large .esri-popup__main-container,
+.esri-view-width-xlarge .esri-popup__main-container
+{
+    width: 600px;
+}
+.esri-popup--is-docked-top-right .esri-popup__main-container {
+    max-width: 350px;
+    margin-top: 5rem;
+}
+#popupButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.popupButton {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 3px 20px;
+    margin: 4px 0;
+    border: none;
+    /*border-radius: 4px;*/
+}
+.active {
+    color: white;
+    background-color: #002E5D;
+}
+#popupImage {
+    max-height: 100px;
+    object-fit: cover;
+    width: 100%;
+}
+#popupText {
+    font-size: 12px;
+}
+
+

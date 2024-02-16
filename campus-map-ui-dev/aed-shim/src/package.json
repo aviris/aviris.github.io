@@ -1,0 +1,30 @@
+{
+  "name": "aed-shim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-regex": "^5.0.1",
+    "aws-sdk": "^2.1386.0",
+    "byu-wso2-request": "^3.3.3",
+    "express": "^4.18.2",
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "lint": "npx standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byu-oit/campus-map-ui.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/byu-oit/campus-map-ui/issues"
+  },
+  "homepage": "https://github.com/byu-oit/campus-map-ui#readme"
+}

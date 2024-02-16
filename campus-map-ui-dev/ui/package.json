@@ -1,0 +1,36 @@
+{
+  "name": "campus-map-ui",
+  "version": "2.2.0",
+  "description": "Campus map for Brigham Young University",
+  "main": "index.html",
+  "repository": "https://github.com/byu-oit/campus-map-ui",
+  "author": "Blake Morgan <blake_morgan@byu.edu>",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .ts,.js .",
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.791.0"
+  },
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.17.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^3.10.1",
+    "dojo-typings": "^1.11.11",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --fix"
+    }
+  }
+}

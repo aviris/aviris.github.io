@@ -1,0 +1,86 @@
+#feedback-widget-button {
+    background-color: #0062B8;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: "Public Sans", Arial, sans-serif;
+}
+
+#feedback-form-container {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.form-header {
+    display: flex;
+    height: 32px;
+    background-color: #002E5D;
+    color: white;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+#close-form {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.form-body {
+    background-color: white;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#feedback-form input, #feedback-form textarea, #feedback-form select {
+    width: 240px;
+    border: solid 2px #002E5D;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 4px;
+    font-family: "Public Sans", Arial, sans-serif;
+}
+
+#feedback-form button {
+    color: white;
+    padding: 12px 20px;
+    background-color: #006141;
+    margin: 8px 0 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+#feedback-form button[disabled] {
+    color: white;
+    padding: 12px 20px;
+    background-color: #8F8F8F;
+    margin: 8px 0 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+#feedback-msg {
+    color: black;
+    margin-top: 0;
+    padding: 0 16px;
+}
+
+#feedback-error {
+    color: #A3082A;
+    margin-top: 0;
+    padding: 0 16px;
+}

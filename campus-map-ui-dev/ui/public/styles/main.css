@@ -1,0 +1,60 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Public Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: 100%;
+}
+
+#viewDiv {
+    position: absolute;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.page-content {
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+}
+
+button#indoor-toggle-btn {
+    background-color: #0062B8;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+button#indoor-toggle-btn:disabled {
+    background-color: #8F8F8F;
+    cursor: not-allowed;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
